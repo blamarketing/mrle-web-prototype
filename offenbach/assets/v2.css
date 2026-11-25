@@ -129,3 +129,4 @@
 @media (max-width:1240px){.header-cta{display:none}}
 
 .topbar .left{display:flex;gap:28px;align-items:center}
+@media (max-width:1050px){.nav{padding-bottom:96px}}
