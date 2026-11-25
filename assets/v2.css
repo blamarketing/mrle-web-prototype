@@ -127,3 +127,5 @@
 .nav>li>a{white-space:nowrap}
 .header-cta .btn{white-space:nowrap;padding:0 18px}
 @media (max-width:1240px){.header-cta{display:none}}
+
+.topbar .left{display:flex;gap:28px;align-items:center}

@@ -1,0 +1,30 @@
+/* Startseite der Gruppe + Standortseiten */
+.quick{padding:0!important;background:var(--bg2)}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);margin:-70px 0 0;position:relative;z-index:5;background:var(--bg)}
+.qpanel{padding:46px 44px;text-align:center}
+.qpanel+.qpanel{border-left:1px solid var(--line)}
+.qpanel h2{font-size:34px;margin-bottom:10px}
+.qpanel p{color:var(--muted);font-size:14px;margin-bottom:24px}
+.qbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.qbtns .btn{min-width:130px}
+.loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.loc-card{border:1px solid var(--line);background:rgba(0,0,0,.16);display:flex;flex-direction:column;transition:.4s}
+.loc-card:hover{border-color:var(--accent);transform:translateY(-6px)}
+.loc-card .ph{display:block;aspect-ratio:4/3;background:#000 center/cover no-repeat}
+.loc-card .body{padding:30px;display:flex;flex-direction:column;flex:1}
+.loc-card .eyebrow{margin-bottom:10px}
+.loc-card h3{font-size:28px;margin-bottom:14px}
+.loc-card h3 a:hover{color:var(--accent)}
+.loc-card .addr{font-size:14px;color:var(--muted);margin-bottom:6px}
+.loc-card .tel{font-size:14px;margin-bottom:22px}
+.loc-card .tel a{border-bottom:1px solid var(--accent)}
+.loc-card .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
+.loc-card .acts .btn{height:40px;padding:0 6px;font-size:11px;letter-spacing:.03em}
+.loc-card .more{margin-top:auto;align-self:flex-start}
+.alg{display:inline-block;margin-left:6px;font-size:10px;letter-spacing:.06em;color:var(--accent);border:1px solid var(--line);padding:0 5px;border-radius:3px;font-weight:700}
+.alg-legend{columns:3;column-gap:34px;list-style:none;padding:0;margin:0;font-size:12.5px;color:var(--muted)}
+.alg-legend li{break-inside:avoid;margin-bottom:6px}
+.alg-legend b{color:var(--accent);margin-right:6px}
+.hero-slider .hero-btns{margin-top:28px}
+@media (max-width:900px){.qgrid{grid-template-columns:1fr;margin-top:-40px}.qpanel+.qpanel{border-left:0;border-top:1px solid var(--line)}.qpanel{padding:34px 22px}.loc-grid{grid-template-columns:1fr}.alg-legend{columns:1}.site-footer .foot-cols{grid-template-columns:1fr 1fr!important}}
+@media (max-width:560px){.site-footer .foot-cols{grid-template-columns:1fr!important}.loc-card .acts{grid-template-columns:1fr}}

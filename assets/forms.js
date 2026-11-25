@@ -2,7 +2,7 @@
    Es wird nichts versendet. Später an WordPress-Formular bzw. Reservierungssystem (Viet360) anbinden. */
 (function(){
   // ---- Öffnungszeiten (aus der bisherigen Website) ----
-  var HOURS={1:[['11:30','15:00'],['17:00','22:00']],2:[['11:30','15:00'],['17:00','22:00']],3:[['11:30','15:00'],['17:00','22:00']],4:[['11:30','15:00'],['17:00','22:00']],5:[['11:30','22:30']],6:[['11:30','22:30']],0:[['11:30','22:30']]};
+  var HOURS=window.LOC_HOURS||{1:[['11:30','15:00'],['17:00','22:00']],2:[['11:30','15:00'],['17:00','22:00']],3:[['11:30','15:00'],['17:00','22:00']],4:[['11:30','15:00'],['17:00','22:00']],5:[['11:30','22:30']],6:[['11:30','22:30']],0:[['11:30','22:30']]};
   var RES_LAST_MIN=60;   // letzte Reservierung: Schließzeit minus 60 Min.  (OFFEN: vom Restaurant bestätigen lassen)
   var PICK_LAST_MIN=30;  // letzte Abholung: Schließzeit minus 30 Min.     (OFFEN)
   var PICK_LEAD_MIN=30;  // frühestens in 30 Min. abholbereit              (OFFEN)
@@ -93,7 +93,7 @@
     var pd=$('#o-date'),pt=$('#o-time'),today=new Date();today.setHours(12,0,0,0);
     for(var i=0;i<7;i++){var d=new Date(today);d.setDate(d.getDate()+i);var o=document.createElement('option');o.value=iso(d);o.textContent=(i===0?'Heute, ':i===1?'Morgen, ':'')+d.toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long'});pd.appendChild(o)}
     function fillPick(){var d=new Date(pd.value+'T12:00:00'),now=new Date(),nb=(iso(d)===iso(now))?(now.getHours()*60+now.getMinutes()+PICK_LEAD_MIN):null,s=slots(d,15,PICK_LAST_MIN,nb);
-      pt.innerHTML='<option value="">Uhrzeit wählen</option>'+s.map(function(t){return '<option value="'+t+'">'+t+' Uhr</option>'}).join('');if(!s.length)pt.innerHTML='<option value="">Heute nicht mehr möglich</option>'}
+      pt.innerHTML='<option value="">Uhrzeit wählen</option>'+s.map(function(t){return '<option value="'+t+'">'+t+' Uhr</option>'}).join('');if(!s.length)pt.innerHTML='<option value="">Keine Zeiten verfügbar</option>'}
     pd.addEventListener('change',fillPick);fillPick();
     // Mobil: Warenkorb ein-/ausblenden
     $('.cartbar').addEventListener('click',function(){cartEl.classList.add('open')});
