@@ -130,3 +130,7 @@
 
 .topbar .left{display:flex;gap:28px;align-items:center}
 @media (max-width:1050px){.nav{padding-bottom:96px}}
+
+.nav>li.only-m{display:none}
+@media (max-width:1050px){.nav>li.only-m{display:block}}
+@media (max-width:900px){.topbar{display:none}.site-header .mainbar .wrap{height:76px}.hero{padding-top:120px}.hero.sm{padding-top:130px}}
