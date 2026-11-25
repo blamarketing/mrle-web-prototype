@@ -28,3 +28,5 @@
 .hero-slider .hero-btns{margin-top:28px}
 @media (max-width:900px){.qgrid{grid-template-columns:1fr;margin-top:-40px}.qpanel+.qpanel{border-left:0;border-top:1px solid var(--line)}.qpanel{padding:34px 22px}.loc-grid{grid-template-columns:1fr}.alg-legend{columns:1}.site-footer .foot-cols{grid-template-columns:1fr 1fr!important}}
 @media (max-width:560px){.site-footer .foot-cols{grid-template-columns:1fr!important}.loc-card .acts{grid-template-columns:1fr}}
+
+@media (max-width:1180px) and (min-width:901px){.loc-card .acts{grid-template-columns:1fr 1fr}}

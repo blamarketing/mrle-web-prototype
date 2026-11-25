@@ -134,3 +134,8 @@
 .nav>li.only-m{display:none}
 @media (max-width:1050px){.nav>li.only-m{display:block}}
 @media (max-width:900px){.topbar{display:none}.site-header .mainbar .wrap{height:76px}.hero{padding-top:120px}.hero.sm{padding-top:130px}}
+
+.skip{position:absolute;left:-999px;top:0;z-index:999;background:#e9b44c;color:#2a1a0e;padding:12px 18px;font-weight:700}.skip:focus{left:12px;top:12px}
+.loc-card .acts .btn{white-space:normal;line-height:1.15;text-align:center}
+@media (max-width:1180px) and (min-width:901px){.loc-card .acts{grid-template-columns:1fr 1fr}}
+:focus-visible{outline:2px solid #e9b44c;outline-offset:2px}
